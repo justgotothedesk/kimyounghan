@@ -1,6 +1,6 @@
-package com.example.kimyounghan.trace.logtrace;
+package com.example.kimyounghan.app.trace.logtrace;
 
-import com.example.kimyounghan.trace.TraceStatus;
+import com.example.kimyounghan.app.trace.TraceStatus;
 
 public interface LogTrace {
     TraceStatus begin(String message);

@@ -1,8 +1,7 @@
-package com.example.kimyounghan;
+package com.example.kimyounghan.app;
 
-import com.example.kimyounghan.trace.logtrace.FieldLogTrace;
-import com.example.kimyounghan.trace.logtrace.LogTrace;
-import com.example.kimyounghan.trace.logtrace.ThreadLocalLogTrace;
+import com.example.kimyounghan.app.trace.logtrace.LogTrace;
+import com.example.kimyounghan.app.trace.logtrace.ThreadLocalLogTrace;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

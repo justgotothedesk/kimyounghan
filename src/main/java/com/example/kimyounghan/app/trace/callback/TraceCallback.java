@@ -1,4 +1,4 @@
-package com.example.kimyounghan.trace.callback;
+package com.example.kimyounghan.app.trace.callback;
 
 public interface TraceCallback<T> {
     T call();

@@ -1,21 +1,21 @@
-package com.example.kimyounghan.trace.logtrace;
+package com.example.kimyounghan.app.trace.logtrace;
 
-import com.example.kimyounghan.trace.TraceId;
-import com.example.kimyounghan.trace.TraceStatus;
+import com.example.kimyounghan.app.trace.TraceId;
+import com.example.kimyounghan.app.trace.TraceStatus;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class ThreadLocalLogTrace implements LogTrace{
+public class FieldLogTrace implements LogTrace{
     private static final String START_PREFIX = "-->";
     private static final String COMPLETE_PREFIX = "<--";
     private static final String EX_PREFIX = "<X-";
 
-    private ThreadLocal<TraceId> traceIdHolder = new ThreadLocal<>();
+    private TraceId traceIdHolder;
 
     @Override
     public TraceStatus begin(String message) {
         syncTraceId();
-        TraceId traceId = traceIdHolder.get();
+        TraceId traceId = traceIdHolder;
         Long startTimeMs = System.currentTimeMillis();
         log.info("[{}] {}{}", traceId.getId(), addSpace(START_PREFIX, traceId.getLevel()), message);
 
@@ -23,11 +23,10 @@ public class ThreadLocalLogTrace implements LogTrace{
     }
 
     private void syncTraceId() {
-        TraceId traceId = traceIdHolder.get();
-        if(traceId == null) {
-            traceIdHolder.set(new TraceId());
+        if(traceIdHolder == null) {
+            traceIdHolder = new TraceId();
         } else {
-            traceIdHolder.set(traceId.createNextId());
+            traceIdHolder = traceIdHolder.createNextId();
         }
     }
 
@@ -55,11 +54,10 @@ public class ThreadLocalLogTrace implements LogTrace{
     }
 
     private void releaseTraceId() {
-        TraceId traceId = traceIdHolder.get();
-        if(traceId.isFirstLevel()) {
-            traceIdHolder.remove();
+        if(traceIdHolder.isFirstLevel()) {
+            traceIdHolder = null;
         } else {
-            traceIdHolder.set(traceId.createPreviousId());
+            traceIdHolder = traceIdHolder.createPreviousId();
         }
     }
 

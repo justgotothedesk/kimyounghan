@@ -1,9 +1,8 @@
 package com.example.kimyounghan.app.v5;
 
-import com.example.kimyounghan.trace.callback.TraceCallback;
-import com.example.kimyounghan.trace.callback.TraceTemplate;
-import com.example.kimyounghan.trace.logtrace.LogTrace;
-import com.example.kimyounghan.trace.template.AbstractTemplate;
+import com.example.kimyounghan.app.trace.callback.TraceCallback;
+import com.example.kimyounghan.app.trace.callback.TraceTemplate;
+import com.example.kimyounghan.app.trace.logtrace.LogTrace;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

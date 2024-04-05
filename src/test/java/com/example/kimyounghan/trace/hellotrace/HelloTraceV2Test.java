@@ -1,6 +1,7 @@
 package com.example.kimyounghan.trace.hellotrace;
 
-import com.example.kimyounghan.trace.TraceStatus;
+import com.example.kimyounghan.app.trace.TraceStatus;
+import com.example.kimyounghan.app.trace.hellotrace.HelloTraceV2;
 import org.junit.jupiter.api.Test;
 
 public class HelloTraceV2Test {

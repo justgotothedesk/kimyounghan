@@ -1,6 +1,7 @@
 package com.example.kimyounghan.trace.logtrace;
 
-import com.example.kimyounghan.trace.TraceStatus;
+import com.example.kimyounghan.app.trace.TraceStatus;
+import com.example.kimyounghan.app.trace.logtrace.ThreadLocalLogTrace;
 import org.junit.jupiter.api.Test;
 
 public class ThreadLocalLogTraceTest {

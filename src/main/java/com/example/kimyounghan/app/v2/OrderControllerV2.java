@@ -1,8 +1,7 @@
 package com.example.kimyounghan.app.v2;
 
-import com.example.kimyounghan.trace.TraceStatus;
-import com.example.kimyounghan.trace.hellotrace.HelloTraceV1;
-import com.example.kimyounghan.trace.hellotrace.HelloTraceV2;
+import com.example.kimyounghan.app.trace.TraceStatus;
+import com.example.kimyounghan.app.trace.hellotrace.HelloTraceV2;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

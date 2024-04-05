@@ -1,7 +1,7 @@
-package com.example.kimyounghan.trace.template;
+package com.example.kimyounghan.app.trace.template;
 
-import com.example.kimyounghan.trace.TraceStatus;
-import com.example.kimyounghan.trace.logtrace.LogTrace;
+import com.example.kimyounghan.app.trace.logtrace.LogTrace;
+import com.example.kimyounghan.app.trace.TraceStatus;
 
 public abstract class AbstractTemplate<T> {
     private final LogTrace trace;

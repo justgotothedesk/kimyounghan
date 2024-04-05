@@ -1,8 +1,8 @@
 package com.example.kimyounghan.app.v2;
 
-import com.example.kimyounghan.trace.TraceId;
-import com.example.kimyounghan.trace.TraceStatus;
-import com.example.kimyounghan.trace.hellotrace.HelloTraceV2;
+import com.example.kimyounghan.app.trace.TraceId;
+import com.example.kimyounghan.app.trace.TraceStatus;
+import com.example.kimyounghan.app.trace.hellotrace.HelloTraceV2;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

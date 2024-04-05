@@ -1,8 +1,7 @@
-package com.example.kimyounghan.trace.callback;
+package com.example.kimyounghan.app.trace.callback;
 
-import com.example.kimyounghan.trace.TraceStatus;
-import com.example.kimyounghan.trace.logtrace.LogTrace;
-import org.springframework.context.annotation.Bean;
+import com.example.kimyounghan.app.trace.logtrace.LogTrace;
+import com.example.kimyounghan.app.trace.TraceStatus;
 
 public class TraceTemplate {
     private final LogTrace trace;

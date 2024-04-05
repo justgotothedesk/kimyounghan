@@ -1,4 +1,4 @@
-package com.example.kimyounghan.trace;
+package com.example.kimyounghan.app.trace;
 
 import lombok.Getter;
 

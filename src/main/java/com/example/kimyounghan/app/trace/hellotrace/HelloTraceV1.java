@@ -1,7 +1,7 @@
-package com.example.kimyounghan.trace.hellotrace;
+package com.example.kimyounghan.app.trace.hellotrace;
 
-import com.example.kimyounghan.trace.TraceId;
-import com.example.kimyounghan.trace.TraceStatus;
+import com.example.kimyounghan.app.trace.TraceId;
+import com.example.kimyounghan.app.trace.TraceStatus;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
