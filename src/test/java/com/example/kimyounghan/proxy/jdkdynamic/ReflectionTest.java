@@ -43,15 +43,14 @@ public class ReflectionTest {
 
         // callA 메서드 정보
         Method methodCallA = classHello.getMethod("callA");
-        Object result1 = methodCallA.invoke(target);
-        log.info("result1={}", result1);
+        dynamicCall(methodCallA, target);
 
         // callB 메서드 정보
         Method methodCallB = classHello.getMethod("callB");
-        Object result2 = methodCallA.invoke(target);
-        log.info("result2={}", result2);
+        dynamicCall(methodCallB, target);
     }
 
+    // 추상화를 통한 동적 메소드 실행, 공통화 가능
     private void dynamicCall(Method method, Object target) throws Exception {
         log.info("start");
         Object result = method.invoke(target);
