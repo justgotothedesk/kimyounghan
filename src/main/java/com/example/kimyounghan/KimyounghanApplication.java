@@ -8,6 +8,7 @@ import com.example.kimyounghan.proxy.config.v1_proxy.ConcreteProxyConfig;
 import com.example.kimyounghan.proxy.config.v1_proxy.InterfaceProxyConfig;
 import com.example.kimyounghan.proxy.config.v2_dynamicproxy.DynamicProxyBasicConfig;
 import com.example.kimyounghan.proxy.config.v2_dynamicproxy.DynamicProxyFilterConfig;
+import com.example.kimyounghan.proxy.config.v3_proxyfactory.ProxyFactoryConfigV1;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -17,7 +18,8 @@ import org.springframework.context.annotation.Import;
 // @Import(InterfaceProxyConfig.class)
 // @Import(ConcreteProxyConfig.class)
 // @Import(DynamicProxyBasicConfig.class)
-@Import(DynamicProxyFilterConfig.class)
+// @Import(DynamicProxyFilterConfig.class)
+@Import(ProxyFactoryConfigV1.class)
 @SpringBootApplication (scanBasePackages = "com.example.kimyounghan.proxy")
 public class KimyounghanApplication {
 
